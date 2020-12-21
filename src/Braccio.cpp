@@ -26,7 +26,7 @@ extern Servo wrist_rot;
 extern Servo wrist_ver;
 extern Servo gripper;
 
-extern int step_base = 60;
+extern int step_base = 170;
 extern int step_shoulder = 140;
 extern int step_elbow = 0;
 extern int step_wrist_rot = 180;
@@ -64,14 +64,14 @@ unsigned int _Braccio::begin(int soft_start_level) {
 	gripper.attach(3);
         
 	//For each step motor this set up the initial degree
-	base.write(60);
+	base.write(170);
 	shoulder.write(140);
 	elbow.write(0);
 	wrist_ver.write(180);
 	wrist_rot.write(180);
 	gripper.write(95);
 	//Previous step motor position
-	step_base = 60;
+	step_base = 170;
 	step_shoulder = 140;
 	step_elbow = 0;
 	step_wrist_ver = 180;
@@ -128,8 +128,8 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
 	// Check values, to avoid dangerous positions for the Braccio
     	if (stepDelay > 30) stepDelay = 30;
 	if (stepDelay < 10) stepDelay = 10;
-	if (vBase < 0) vBase=0;
-	if (vBase > 180) vBase=180;
+	if (vBase < 10) vBase=10;
+	if (vBase > 190) vBase=190;
 	if (vShoulder < 15) vShoulder=15;
 	if (vShoulder > 165) vShoulder=165;
 	if (vElbow < 0) vElbow=0;
