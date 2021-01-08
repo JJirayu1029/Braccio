@@ -63,6 +63,8 @@ unsigned int _Braccio::begin(int soft_start_level) {
 	wrist_ver.attach(5);
 	gripper.attach(3);
         
+	Braccio.ServoMovement(20, 170,  140, 0, 180,  180,   95);
+	
 	//Previous step motor position
 	step_base = 170;
 	step_shoulder = 140;
