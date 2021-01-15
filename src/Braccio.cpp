@@ -104,10 +104,10 @@ void _Braccio::_softwarePWM(int high_time, int low_time){
 void _Braccio::_softStart(int soft_start_level){      
 	long int tmp=millis();
 	while(millis()-tmp < LOW_LIMIT_TIMEOUT)
-		_softwarePWM(80+soft_start_level, 450 - soft_start_level);   //the sum should be 530usec	
+		_softwarePWM(80+soft_start_level, 449 - soft_start_level);   //the sum should be 530usec	
 
 	while(millis()-tmp < HIGH_LIMIT_TIMEOUT)
-		_softwarePWM(75 + soft_start_level, 430 - soft_start_level); //the sum should be 505usec
+		_softwarePWM(76 + soft_start_level, 430 - soft_start_level); //the sum should be 505usec
 
 	digitalWrite(SOFT_START_CONTROL_PIN,HIGH);
 }
