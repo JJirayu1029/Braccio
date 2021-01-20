@@ -128,7 +128,7 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
 	// Check values, to avoid dangerous positions for the Braccio
     	if (stepDelay > 30) stepDelay = 30;
 	if (stepDelay < 10) stepDelay = 10;
-	if (vBase < 10) vBase=10;
+	if (vBase < 30) vBase=30;
 	if (vBase > 210) vBase=210;
 	if (vShoulder < 15) vShoulder=15;
 	if (vShoulder > 165) vShoulder=165;
