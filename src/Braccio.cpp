@@ -29,8 +29,8 @@ extern Servo gripper;
 extern int step_base = 170;
 extern int step_shoulder = 140;
 extern int step_elbow = 0;
-extern int step_wrist_rot = 180;
-extern int step_wrist_ver = 90;
+extern int step_wrist_rot = 90;
+extern int step_wrist_ver = 180;
 extern int step_gripper = 95;
  
 
