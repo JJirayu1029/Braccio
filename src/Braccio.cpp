@@ -30,7 +30,7 @@ extern int step_base = 170;
 extern int step_shoulder = 140;
 extern int step_elbow = 0;
 extern int step_wrist_rot = 180;
-extern int step_wrist_ver = 180;
+extern int step_wrist_ver = 90;
 extern int step_gripper = 95;
  
 
@@ -68,14 +68,14 @@ unsigned int _Braccio::begin(int soft_start_level) {
 	shoulder.write(140);
 	elbow.write(0);
 	wrist_ver.write(180);
-	wrist_rot.write(180);
+	wrist_rot.write(90);
 	gripper.write(95);
 	//Previous step motor position
 	step_base = 170;
 	step_shoulder = 140;
 	step_elbow = 0;
 	step_wrist_ver = 180;
-	step_wrist_rot = 180;
+	step_wrist_rot = 90;
 	step_gripper = 95;
 
 	if(soft_start_level!=SOFT_START_DISABLED)
